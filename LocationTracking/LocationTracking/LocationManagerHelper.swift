@@ -31,13 +31,13 @@ class LocationManagerHelper: NSObject {
     }
     
     public func locationUpdatesAsPerCalculatedSpeedOfVehicle() {
-    
+        
         // Manual testing for speed using Textfield on the home view controller
-       /* if speedInKmPerHour != previousSpeedInKmPerHour && previousSpeedInKmPerHour > 0.0 {
-            isSpeedChanged = true
-        } else {
-            isSpeedChanged = false
-        }*/
+        /* if speedInKmPerHour != previousSpeedInKmPerHour && previousSpeedInKmPerHour > 0.0 {
+         isSpeedChanged = true
+         } else {
+         isSpeedChanged = false
+         }*/
         
         if isSpeedChanged {
             if (speedInKmPerHour > 0 || speedInKmPerHour < 30) && previousSpeedInKmPerHour < 30 {
@@ -156,7 +156,7 @@ class LocationManagerHelper: NSObject {
             }
         } else {
             do {
-            _ = try data.write(to: fileurl, options: .atomic)
+                _ = try data.write(to: fileurl, options: .atomic)
             } catch let error {
                 print("cant write \(error.localizedDescription)")
             }
@@ -197,8 +197,8 @@ extension LocationManagerHelper: CLLocationManagerDelegate {
             // formula for calculate meter per second to km/h.
             // km/h = mps * 3.6
             // 5m/sec = (5 * 3.6) = 18 km/h
-             speedInKmPerHour = (speedInMeterPerSecond * 3.6)
-           // print("speed \(speedInKmPerHour) Km/h")
+            speedInKmPerHour = (speedInMeterPerSecond * 3.6)
+            // print("speed \(speedInKmPerHour) Km/h")
             if speedInKmPerHour != previousSpeedInKmPerHour && previousSpeedInKmPerHour > 0.0 {
                 isSpeedChanged = true
             } else {

@@ -1,4 +1,10 @@
-
+//
+//  AppDelegate.swift
+//  LocationTracking
+//
+//  Created by Shridhar Mali on 6/15/17.
+//  Copyright © 2017 Shridhar Mali. All rights reserved.
+//
 
 import UIKit
 import CoreData
