@@ -13,13 +13,22 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var locationLbl: UILabel!
     @IBOutlet weak var btnLocationUpdate: UISwitch!
     let locationManagerHelper = LocationManagerHelper.sharedInstance
+    
+    // MARK:- ViewLife Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.btnLocationUpdate.isOn = false
         // Do any additional setup after loading the view, typically from a nib.
     }
+    // MARK:- Private Methods
+    
+    // MARK:- Actions
     @IBAction func enableLocationUpdates(_ sender: UISwitch) {
-        
+        if sender.isOn {
+            locationManagerHelper.updateUserLocation()
+        } else {
+            // locationManagerHelper.stopLocationUpdate()
+        }
     }
 
     override func didReceiveMemoryWarning() {

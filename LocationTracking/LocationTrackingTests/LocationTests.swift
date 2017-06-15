@@ -35,5 +35,13 @@ class LocationTests: XCTestCase {
         XCTAssertFalse(sut.btnLocationUpdate.isOn)
     }
 
+    // Test Case for check is user grant request for the user/device location access?
+    func testHomeViewController_isUserGrantLocationAccess() {
+        if sut.btnLocationUpdate.isOn {
+            XCTAssertNotNil(sut.locationManagerHelper.updateUserLocation())
+        } else {
+            XCTAssertNotNil(sut.locationManagerHelper.stopLocationUpdate())
+        }
+    }
     
 }
