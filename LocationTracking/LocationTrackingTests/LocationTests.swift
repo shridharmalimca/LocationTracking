@@ -44,4 +44,10 @@ class LocationTests: XCTestCase {
         }
     }
     
+    // Is user latitude & longitude set in location manager
+    func testHomeViewController_IsUserCurrentLocationShouldNotBeNil() {
+        XCTAssertNotNil(sut.locationManagerHelper.latitude)
+        XCTAssertNotNil(sut.locationManagerHelper.longitude)
+    }
+    
 }

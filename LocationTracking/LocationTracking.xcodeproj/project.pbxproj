@@ -88,16 +88,10 @@
 			isa = PBXGroup;
 			children = (
 				2017ACE51EF2EEFD002E15A5 /* AppDelegate.swift */,
-				2017ACE71EF2EEFD002E15A5 /* HomeViewController.swift */,
-				2017ACE91EF2EEFD002E15A5 /* Main.storyboard */,
-				2017ACEF1EF2EEFD002E15A5 /* Assets.xcassets */,
-				2017ACF11EF2EEFE002E15A5 /* LaunchScreen.storyboard */,
-				2017ACF41EF2EEFE002E15A5 /* Info.plist */,
-				2017ACEC1EF2EEFD002E15A5 /* LocationTracking.xcdatamodeld */,
-				2017AD081EF2F146002E15A5 /* LocationManagerHelper.swift */,
-				2017AD0A1EF2F1A8002E15A5 /* DBHelper.swift */,
-				2017AD0B1EF2F1A8002E15A5 /* CoreDataService.swift */,
-				2017AD0C1EF2F1A8002E15A5 /* PersistentContainer.swift */,
+				2017AD131EF2FAC1002E15A5 /* Controllers */,
+				2017AD121EF2FAB8002E15A5 /* Views */,
+				2017AD111EF2FAA4002E15A5 /* Resources */,
+				2017AD101EF2FA90002E15A5 /* Helper & Models */,
 			);
 			path = LocationTracking;
 			sourceTree = "<group>";
@@ -109,6 +103,44 @@
 				2017ACFF1EF2EEFE002E15A5 /* Info.plist */,
 			);
 			path = LocationTrackingTests;
+			sourceTree = "<group>";
+		};
+		2017AD101EF2FA90002E15A5 /* Helper & Models */ = {
+			isa = PBXGroup;
+			children = (
+				2017AD081EF2F146002E15A5 /* LocationManagerHelper.swift */,
+				2017AD0A1EF2F1A8002E15A5 /* DBHelper.swift */,
+				2017AD0B1EF2F1A8002E15A5 /* CoreDataService.swift */,
+				2017AD0C1EF2F1A8002E15A5 /* PersistentContainer.swift */,
+			);
+			name = "Helper & Models";
+			sourceTree = "<group>";
+		};
+		2017AD111EF2FAA4002E15A5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2017ACEF1EF2EEFD002E15A5 /* Assets.xcassets */,
+				2017ACF41EF2EEFE002E15A5 /* Info.plist */,
+				2017ACEC1EF2EEFD002E15A5 /* LocationTracking.xcdatamodeld */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2017AD121EF2FAB8002E15A5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2017ACE91EF2EEFD002E15A5 /* Main.storyboard */,
+				2017ACF11EF2EEFE002E15A5 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2017AD131EF2FAC1002E15A5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2017ACE71EF2EEFD002E15A5 /* HomeViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +194,11 @@
 					2017ACE11EF2EEFD002E15A5 = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					2017ACF81EF2EEFE002E15A5 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -428,6 +465,7 @@
 				2017AD041EF2EEFE002E15A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2017AD051EF2EEFE002E15A5 /* Build configuration list for PBXNativeTarget "LocationTrackingTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +474,7 @@
 				2017AD071EF2EEFE002E15A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

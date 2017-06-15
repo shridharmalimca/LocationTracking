@@ -18,11 +18,5 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Location Tracking want to access you location</string>
-	<key>NSLocationUsageDescription</key>
-	<string>Location Tracking want to access you location</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Location Tracking want to access you location</string>
 </dict>
 </plist>
