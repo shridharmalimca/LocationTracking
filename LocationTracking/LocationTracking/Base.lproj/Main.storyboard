@@ -33,6 +33,16 @@
                                     <action selector="enableLocationUpdates:" destination="BYZ-38-t0r" eventType="valueChanged" id="qiC-cZ-sHs"/>
                                 </connections>
                             </switch>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wpn-vP-lR8">
+                                <rect key="frame" x="139" y="170" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="j8r-zU-dXB"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -46,6 +56,7 @@
                     <connections>
                         <outlet property="btnLocationUpdate" destination="dxj-VK-b2H" id="S5R-zQ-wP0"/>
                         <outlet property="locationLbl" destination="Sid-YC-0dk" id="BJq-IE-6j1"/>
+                        <outlet property="speedTxt" destination="wpn-vP-lR8" id="WC5-3u-ZPd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

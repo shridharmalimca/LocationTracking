@@ -10,6 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var speedTxt: UITextField!
     @IBOutlet weak var locationLbl: UILabel!
     @IBOutlet weak var btnLocationUpdate: UISwitch!
     let locationManagerHelper = LocationManagerHelper.sharedInstance
@@ -39,3 +40,15 @@ class HomeViewController: UIViewController {
 
 }
 
+extension HomeViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+         locationManagerHelper.speedInKmPerHour = Double(textField.text!)!
+         locationManagerHelper.locationUpdatesAsPerCalculatedSpeedOfVehicle()
+        return true
+    }
+    
+}

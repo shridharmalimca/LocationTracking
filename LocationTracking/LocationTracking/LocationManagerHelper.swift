@@ -37,8 +37,8 @@ class LocationManagerHelper: NSObject {
          isSpeedChanged = true
          } else {
          isSpeedChanged = false
-         }*/
-        
+         }
+        */
         if isSpeedChanged {
             if (speedInKmPerHour > 0 || speedInKmPerHour < 30) && previousSpeedInKmPerHour < 30 {
                 if speedInKmPerHour > 30 {
@@ -77,7 +77,7 @@ class LocationManagerHelper: NSObject {
             print("0..<30 KM/h")
             if (!isTimerSetForSpeed) {
                 stopTimer()
-                setTimer(timeInterval: 300) // 60 * 5
+                setTimer(timeInterval: 5)// 300) // 60 * 5
                 previousSpeedInKmPerHour = speedInKmPerHour
                 currentTimeInterval = 300
                 nextTimeInterval = 120
@@ -87,7 +87,7 @@ class LocationManagerHelper: NSObject {
             print("30..<60 KM/h")
             if !isTimerSetForSpeed {
                 stopTimer()
-                setTimer(timeInterval: 120) // 60 * 2
+                setTimer(timeInterval: 2) //120) // 60 * 2
                 previousSpeedInKmPerHour = speedInKmPerHour
                 currentTimeInterval = 120
                 nextTimeInterval = 60
@@ -99,7 +99,7 @@ class LocationManagerHelper: NSObject {
             print("60..<80 KM/h")
             if !isTimerSetForSpeed {
                 stopTimer()
-                setTimer(timeInterval: 60)
+                setTimer(timeInterval: 1)// 60)
                 previousSpeedInKmPerHour = speedInKmPerHour
                 currentTimeInterval = 60
                 nextTimeInterval = 30

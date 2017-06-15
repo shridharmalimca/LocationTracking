@@ -50,4 +50,10 @@ class LocationTests: XCTestCase {
         XCTAssertNotNil(sut.locationManagerHelper.longitude)
     }
     
+    // Test case is speedText should not be nil
+    func testHomeViewController_SpeedTextShouldNotBeNil() {
+        XCTAssertNotNil(sut.speedTxt)
+    }
+    
+    
 }
